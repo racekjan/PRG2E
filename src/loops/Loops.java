@@ -18,7 +18,7 @@ public class Loops {
 //            input= sc.nextInt();
 //        }
 
-        int dimension =  100;
+        int dimension =  3;
         for (int i = 1; i < dimension*dimension+1; i++) {
             System.out.print("#\t");
             if (i % dimension == 0){

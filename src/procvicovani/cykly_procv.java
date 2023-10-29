@@ -54,6 +54,14 @@ public class cykly_procv {
 //        }
 //        System.out.println("Cislo 42 padlo " + pocet + "x");
 
+//        Scanner sc = new Scanner(System.in);
+//        int cislo= sc.nextInt();
+//        for (int i = 1; i < cislo*cislo+1; i++) {
+//            System.out.print(i + "\t");
+//            if (i % cislo == 0){
+//                System.out.println();
+//            }
+//        }
 
     }
 }
