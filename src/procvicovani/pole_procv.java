@@ -74,6 +74,8 @@ public class pole_procv {
 
         int[] pickedNumbers ={3,9,6,18,23,15,7,25,23,30};
         int[] guesses = new int[5];
+        boolean[] trfl = new boolean[guesses.length];
+        int counter = 0;
 
         for (int i = 0; i < guesses.length; i++) {
             guesses[i] = sc.nextInt();
@@ -81,10 +83,21 @@ public class pole_procv {
 
         for (int j = 0; j < guesses.length; j++) {
             for (int k = 0; k < pickedNumbers.length; k++) {
-                if (guesses[j] == pickedNumbers[k]) {
-
+                if (guesses[j]==pickedNumbers[k]){
+                    trfl[j]=true;
                 }
             }
         }
+
+        for (int l = 0; l < trfl.length; l++) {
+            if (trfl[l]==true){
+                System.err.print(guesses[l] + ", ");
+                counter++;
+            }else {
+                System.out.print(guesses[l] + ", ");
+            }
+        }
+        System.out.println();
+        System.out.println("Soutezici tipl spravne " + counter + " cisel");
     }
 }
