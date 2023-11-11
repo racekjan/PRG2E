@@ -40,21 +40,22 @@ public class pole_procv {
 //        System.out.println("Cisla " + Arrays.toString(prvniArray));
 //        System.out.println("Odmocniny " + Arrays.toString(druhyArray));
 
-//        int[] array = {1,2,3,4,5,6,7,8,9,10};
+//        int[] array = {1,2,3,4,5,12,7,8,9,10};
 //        int tip = sc.nextInt();
 //        int counter = 0;
-//        int[] indexy = new int[array.length];
+//        boolean[] indexy = new boolean[array.length];
 //        for (int i = 0; i < array.length; i++) {
 //            if (tip == array[i]) {
 //                counter++;
+//                indexy[i]=true;
 //            }
 //        }
 //        System.out.println("Vyskytuje se " + counter + "x");
 //        if (counter>0) {
 //            System.out.println("Indexy:");
-//            for (int i = 0; i < array.length; i++) {
-//                if (tip == array[i]) {
-//                    System.out.println(array[i]);
+//            for (int j = 0; j < indexy.length; j++) {
+//                if (indexy[j]==true){
+//                    System.out.print(j+1 + ", ");
 //                }
 //            }
 //        }
