@@ -5,15 +5,20 @@ import java.util.Scanner;
 
 public class pole_procv2 {
     public static void main(String[] args) {
-        int[] guessArray = new int[5];
+        int tries = 6;
+        int numebers = 5;
+        int min = 5;
+        int max = 20;
+        int[] guessArray = new int[tries];
+
         for (int i = 0; i < guessArray.length; i++) {
-            guessArray[i] = (int)(Math.random()*15+1);
+            guessArray[i] = (int)(Math.random()*(max+min+1)-min);
         }
         System.out.println(Arrays.toString(guessArray));
         int score = 0;
         Scanner sc = new Scanner(System.in);
         int input = 0;
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < tries; i++) {
             System.out.println("Tipni cislo");
             input = sc.nextInt();
             for (int j = 0; j < guessArray.length; j++) {
