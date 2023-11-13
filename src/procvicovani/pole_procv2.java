@@ -20,7 +20,13 @@ public class pole_procv2 {
                 if (guessArray[j] == input){
                     score += 20;
                     System.out.println("Cislo nalezeno, + 20 bodu");
+                    guessArray[j] = -1;
+
                 }
+            }
+            if (score == 100){
+                System.out.println("Tipl jsi vse");
+                break;
             }
         }
         System.out.println("Hra ukoncena");
