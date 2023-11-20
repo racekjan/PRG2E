@@ -50,7 +50,6 @@ public class test_pole {
 //        for (int j = 0; j < pole.length; j++) {
 //            sum=sum+pole[j];
 //        }
-//        System.out.println(Arrays.toString(pole));
 //        prumer=sum/ pole.length;
 //        System.out.println(prumer);
 
