@@ -40,19 +40,19 @@ public class test_pole {
 
 
 
-        int[] pole = new int[8];
-        double sum = 0;
-        double prumer = 0;
-        for (int i = 0; i < pole.length; i++) {
-            pole[i] = (int)(Math.random()*100+1);
-        }
-
-        for (int j = 0; j < pole.length; j++) {
-            sum=sum+pole[j];
-        }
-        System.out.println(Arrays.toString(pole));
-        prumer=sum/ pole.length;
-        System.out.println(prumer);
+//        int[] pole = new int[8];
+//        double sum = 0;
+//        double prumer = 0;
+//        for (int i = 0; i < pole.length; i++) {
+//            pole[i] = (int)(Math.random()*100+1);
+//        }
+//
+//        for (int j = 0; j < pole.length; j++) {
+//            sum=sum+pole[j];
+//        }
+//        System.out.println(Arrays.toString(pole));
+//        prumer=sum/ pole.length;
+//        System.out.println(prumer);
 
     }
 }
