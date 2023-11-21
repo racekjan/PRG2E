@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class pole_procv {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
 //        int pocet = sc.nextInt();
 //        int[] random = new int[pocet];
 //        for (int i = 0; i < random.length; i++) {
