@@ -19,7 +19,6 @@ public class pole_procv3 {
         int rows = 10;
         int colums = 10;
         char[][] pole2 = new char[rows][colums];
-        int pozice = 1;
         for (int k = 0; k < rows; k++) {
             for (int l = 0; l < colums; l++) {
                 pole2[k][k] = 'x';
