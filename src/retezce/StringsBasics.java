@@ -50,6 +50,5 @@ public class StringsBasics {
         System.out.println(Upper);
         System.out.println("Pismeno na 2" + helloTest.charAt(2));
         System.out.println("Kde je 'l'?" + helloTest.indexOf('l'));
-
     }
 }
