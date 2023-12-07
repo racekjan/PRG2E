@@ -32,8 +32,14 @@ public class retezce_procv {
 //        String[] roztrhaneWords = words.split(" ");
 //        System.out.println(roztrhaneWords.length);
 
-        String[] names = {"Jan","Karel","František Dlouhojmenný","Pablo Diego José Francisco de Paula Juan Nepomuceno María de los Remedios Cipriano de la Sanơsima Trinidad Ruiz y Picasso","Eva"};
-        String nejdelsi = "";
+//        String[] names = {"Jan","Karel","František Dlouhojmenný","Pablo Diego José Francisco de Paula Juan Nepomuceno María de los Remedios Cipriano de la Sanơsima Trinidad Ruiz y Picasso","Eva"};
+//        String nejdelsi = "";
+//        for (int i = 0; i < names.length; i++) {
+//            if (nejdelsi.length()-1<names[i].length()-1){
+//                nejdelsi=names[i];
+//            }
+//        }
+//        System.out.println(nejdelsi);
 
 //        String number = "1234567890";
 //        char[] charakters = number.toCharArray();
@@ -67,8 +73,8 @@ public class retezce_procv {
 //        }
 //        System.out.println(an);
 
-        String[] klic = {"a .-","b -...","c -.-.","d -..","e .","f ..-.","g --.","h ....","i ..","j .---","k -.-","l .-..","m --","n -.","o ---","p .--.","q --.-","r .-.","s ...","t -","u ..-","v ..--","w .--","x -..-","y -.--","z --.."};
-        String input = sc.nextLine();
+//        String[] klic = {"a .-","b -...","c -.-.","d -..","e .","f ..-.","g --.","h ....","i ..","j .---","k -.-","l .-..","m --","n -.","o ---","p .--.","q --.-","r .-.","s ...","t -","u ..-","v ..--","w .--","x -..-","y -.--","z --.."};
+//        String input = sc.nextLine();
 
 
 
