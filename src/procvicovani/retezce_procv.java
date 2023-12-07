@@ -73,9 +73,21 @@ public class retezce_procv {
 //        }
 //        System.out.println(an);
 
-//        String[] klic = {"a .-","b -...","c -.-.","d -..","e .","f ..-.","g --.","h ....","i ..","j .---","k -.-","l .-..","m --","n -.","o ---","p .--.","q --.-","r .-.","s ...","t -","u ..-","v ..--","w .--","x -..-","y -.--","z --.."};
-//        String input = sc.nextLine();
-
+        char[] abeceda = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        String[] klic = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+        String input = sc.nextLine();
+        int[] indexy = new int[input.length()];
+        char[] inputPismena = input.toCharArray();
+        for (int i = 0; i < inputPismena.length; i++) {
+            for (int j = 0; j < abeceda.length; j++) {
+                if (inputPismena[i]==abeceda[j]){
+                    indexy[i] = j;
+                }
+            }
+        }
+        for (int i = 0; i < indexy.length; i++) {
+            System.out.print(klic[indexy[i]]+"/");
+        }
 
 
 
