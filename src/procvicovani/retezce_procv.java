@@ -1,5 +1,6 @@
 package procvicovani;
 
+import java.text.Normalizer;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -73,9 +74,12 @@ public class retezce_procv {
 //        }
 //        System.out.println(an);
 
-        char[] abeceda = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-        String[] klic = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+        char[] abeceda = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ','.'};
+        String[] klic = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..","//","///"};
         String input = sc.nextLine();
+        input = Normalizer.normalize(input, Normalizer.Form.NFD);
+        input= input.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+        input=input.toLowerCase();
         int[] indexy = new int[input.length()];
         char[] inputPismena = input.toCharArray();
         for (int i = 0; i < inputPismena.length; i++) {
@@ -85,8 +89,17 @@ public class retezce_procv {
                 }
             }
         }
+        System.out.println(Arrays.toString(indexy));
         for (int i = 0; i < indexy.length; i++) {
-            System.out.print(klic[indexy[i]]+"/");
+            System.out.print(klic[indexy[i]]);
+            if (indexy[i]!=26 || indexy[i]!=27){
+                System.out.print("/");
+            }else if (indexy[i]==26){
+                System.out.print("//");
+            }else {
+                System.out.print("///");
+                System.out.println();
+            }
         }
 
 
