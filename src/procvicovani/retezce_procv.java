@@ -74,5 +74,19 @@ public class retezce_procv {
 //        }
 //        System.out.println(an);
 
+        String palindrom = "jelenovipivonelej";
+        String palindromReverse = "";
+        int pozice = palindrom.length()-1;
+        for (int i = 0; i <= palindrom.length()-1; i++) {
+            palindromReverse+=palindrom.charAt(pozice);
+            pozice--;
+        }
+        if (palindrom.equals(palindromReverse)){
+            System.out.println("jedna se o palindrom");
+        }else {
+            System.out.println("nejedna se palindrom");
+        }
+
+
     }
 }
