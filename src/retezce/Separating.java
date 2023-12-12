@@ -31,6 +31,5 @@ public class Separating {
         System.out.println("number is " + actualNumber);
         System.out.println("soucet je " + (actualNumber + 42));
 
-
     }
 }
