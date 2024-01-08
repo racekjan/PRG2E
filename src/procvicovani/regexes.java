@@ -7,7 +7,5 @@ public class regexes {
         if (num.matches("[0-9][a-z]")){
             System.out.println("Jsou stejne");
         }
-
-
     }
 }
