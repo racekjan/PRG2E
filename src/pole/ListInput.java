@@ -3,7 +3,7 @@ package pole;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class listInput {
+public class ListInput {
     public static void main(String[] args) {
         //uzivatel zadava prvky do pole
         // zadavani se ukonci zadanim -1
@@ -19,7 +19,6 @@ public class listInput {
         }
         System.out.println("Zadano: ");
         System.out.println(numbers);
-
 
     }
 }
