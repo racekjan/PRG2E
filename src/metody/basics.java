@@ -1,6 +1,5 @@
 package metody;
 
-import java.lang.foreign.PaddingLayout;
 
 public class basics {
     static void printHello(){
