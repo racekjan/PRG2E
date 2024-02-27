@@ -20,7 +20,7 @@ public class practice {
         }
         return array;
     }
-    static void timerConvert (int seconds){
+    static void timeConvert (int seconds){
         int minutes = seconds/60;
         int remainingSeconds = seconds%60;
         System.out.println(minutes + ":" + remainingSeconds);
@@ -28,7 +28,8 @@ public class practice {
     public static void main(String[] args) {
         int randomNumber = random(1,500);
         System.out.println(Arrays.toString(randomArray(10,-100,100)));
-        timerConvert(80);
+        timeConvert(80);
+
 
 
     }
