@@ -79,6 +79,33 @@ public class metody_procv {
         }
         return sum;
     }
+    static int hosts (String ip){
+        int reserved = 2;
+        String[] prefix = ip.split("/");
+        String prefixFinal = prefix[prefix.length-1];
+        int prefix2 = Integer.parseInt(prefixFinal);
+        int hosts = (int)((Math.pow(2,32-prefix2))-reserved);
+        return hosts;
+    }
+    static String classes (String ip){
+        int firstOctet = Integer.parseInt(ip.split("\\.")[0]);
+        String ipClass;
+        if (1 <= firstOctet && firstOctet <= 126) {
+            ipClass = "A";
+        } else if (128 <= firstOctet && firstOctet <= 191) {
+            ipClass = "B";
+        } else if (192 <= firstOctet && firstOctet <= 223) {
+            ipClass = "C";
+        } else if (224 <= firstOctet && firstOctet <= 239) {
+            ipClass = "D";
+        } else if (240 <= firstOctet && firstOctet <= 255) {
+            ipClass = "E";
+        } else {
+            ipClass = "N/A";
+        }
+        return ipClass;
+    }
+
     public static void main(String[] args) {
         //1
 //        int[] numbers = {1,3,4,6,7,8,9,10,0};
@@ -97,6 +124,11 @@ public class metody_procv {
 //        }
         //6
 //        System.out.println(digitsSum(String.valueOf(45785527)));
+        //7
+        System.out.println("Počet možných ip adres je: " + hosts("192.168.1.8/24"));
+        System.out.println("IP adresa spadá do třídy: " + classes("192.168.1.8/24"));
+
+
 
 
 
