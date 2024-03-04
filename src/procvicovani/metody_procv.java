@@ -1,5 +1,6 @@
 package procvicovani;
 
+import java.text.DecimalFormat;
 import java.util.Arrays;
 
 public class metody_procv {
@@ -81,8 +82,8 @@ public class metody_procv {
     }
     static int hosts (String ip){
         int reserved = 2;
-        String[] prefix = ip.split("/");
-        String prefixFinal = prefix[prefix.length-1];
+        String[] parts = ip.split("/");
+        String prefixFinal = parts[parts.length-1];
         int prefix2 = Integer.parseInt(prefixFinal);
         int hosts = (int)((Math.pow(2,32-prefix2))-reserved);
         return hosts;
