@@ -14,6 +14,5 @@ public class PersonTest {
         otherPerson.name = "Pepik";
         otherPerson.shoeSize = 36.5;
         otherPerson.intro();
-
     }
 }
