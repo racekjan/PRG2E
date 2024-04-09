@@ -7,7 +7,15 @@ public class Song {
     String author;
     int yearOfRelease;
     double rating;
-    int duration;
+
+    public Song(String name, String author, int yearOfRelease, double rating) {
+        this.name = name;
+        this.author = author;
+        this.yearOfRelease = yearOfRelease;
+        this.rating = rating;
+    }
+
+
     public void printInfo(){
         System.out.println("Song: " + name);
         System.out.println("Written by: " + author);
