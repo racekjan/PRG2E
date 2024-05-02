@@ -30,6 +30,7 @@ public class ArcadeGame {
             this.score += score;
             if (this.score>highestScore){
                 highestScore=this.score;
+
             }
         } else {
             System.out.println("Nepodarilo se navisit skore");
