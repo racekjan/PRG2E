@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class vigenereCipher {
     public static void main(String[] args) {
-        String text = "lokomotiva";
-        String key = "kodak";
+        String text = "F3vnv4_xz4R_eU3j4V_Ab48q1mF3vnv4_xz4R_eU3j4V_Ab48q1m";
+        String key = "secure";
         text = text.toLowerCase();
         key = key.toLowerCase();
         char[] textArray = text.toCharArray() ;
