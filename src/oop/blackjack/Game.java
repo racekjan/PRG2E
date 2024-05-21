@@ -12,13 +12,47 @@ public class Game {
         this.dealerValue = (int)(Math.random()*11+10);
     }
 
+    boolean takeTurn(){
+        System.out.println("Liznout si dalsi kartu?");
+        Scanner sc = new Scanner(System.in);
+        return sc.nextLine().equals("ano");
+    }
+    void printInfo(){
+        System.out.println("===================");
+        System.out.println("Hrac:\t" + player.getHandValue());
+        System.out.println("Dealer:\t" + dealerValue);
+        System.out.println("===================");
+    }
     void start(){
-        if (wantToPlay()){
+        while (wantToPlay()){
             bet = 2*betAmount();
-
-        }else {
-            System.out.println("Hra ukoncena");
+            System.out.println("Hra zacala a vyherni castka je " + bet);
+            player.pickCard();
+            while (takeTurn() && player.getHandValue()<21){
+                player.pickCard();
+                System.out.println("V ruce mas: " + player.getHandValue());
+            }
+            printInfo();
+            if (player.getHandValue()==21){
+                System.out.println("Hrac " + player.name + " vyhral " + bet);
+                player.money += bet;
+            } else if (player.getHandValue() == dealerValue) {
+                player.money += bet/2;
+                System.out.println("Hra dopadla remizou");
+            } else if (player.getHandValue() > 21) {
+                System.out.println("Hrac " + player.name + " prohrava");
+            } else if (21 - player.getHandValue() > 21-dealerValue) {
+                System.out.println("Hrac " + player.name + " prohrava");
+            } else {
+                System.out.println("Hrac " + player.name + " vyhral " + bet);
+                player.money += bet;
+            }
+            System.out.println("Kolo ukonceno, na ucte ma hrac " + player.name + " " + player.money);
+            dealerValue = (int)(Math.random()*11+10);
+            player.handValue=0;
         }
+
+        System.out.println("Hra ukoncena");
 
     }
     int betAmount(){
@@ -46,5 +80,7 @@ public class Game {
     public static void main(String[] args) {
         Player james = new Player("James",1000);
         Game blackjack = new Game(james);
+
+        blackjack.start();
     }
 }
