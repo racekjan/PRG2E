@@ -9,7 +9,7 @@ public class Reader {
         sc = new Scanner(System.in);
     }
 
-    String ReadInput(){
+    String readInput(){
         System.out.println("Zadej volbu (1 pismeno):");
         String input = sc.nextLine();
         while (input.length() != 1) {
