@@ -54,6 +54,7 @@ public class BankAccount {
         acc2.withdraw(9000);
 
         acc1.transaction(acc2, 3000);
+        System.out.println(acc1.toString());
     }
 
 
